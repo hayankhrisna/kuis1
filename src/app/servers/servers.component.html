@@ -1,0 +1,24 @@
+<label>log</label>
+<!-- <input 
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"> -->
+<!--<input 
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>-->
+<br>
+
+<button 
+  class="btn btn-primary" 
+  [disabled]="!allowNewServer"
+  (click)="onCreationStatus()">Tampilkan Detail</button><br>
+<!-- <p>{{ serverCreationStatus }}</p>
+<p *ngIf= "serverCreated; else noServer"> Server telah dibuat, nama server adalah {{ serverName }}</p>
+<ng-template #noServer>
+  <p>No server was created</p>
+</ng-template>-->
+<p *ngIf= "serverCreated">INI KAMPUSKU</p>
+<!--app-server></app-server>-->
+<app-server *ngFor= "let server of servers"></app-server>
